@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Library.fs" />
+    <TypeScriptCompile Include="..\App.tsx">
+      <Link>App.tsx</Link>
+    </TypeScriptCompile>
+    <Content Include="..\package.json">
+      <Link>package.json</Link>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Feliz.ReactNative" Version="0.8.2" />
+    <PackageReference Include="Feliz.UseElmish" Version="2.5.0" />
+  </ItemGroup>
+
+</Project>
