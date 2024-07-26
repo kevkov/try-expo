@@ -1,2 +1,0 @@
-D:\dev\spike\try-expo\src\obj\Debug\net8.0\App.AssemblyInfoInputs.cache
-D:\dev\spike\try-expo\src\obj\Debug\net8.0\App.AssemblyInfo.fs
