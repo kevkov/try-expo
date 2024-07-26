@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "dgSpecHash": "YIG9z/MlQqA=",
+  "success": true,
+  "projectFilePath": "D:\\dev\\spike\\try-expo\\src\\App.fsproj",
+  "expectedPackageFiles": [
+    "D:\\kevha\\.nuget\\packages\\fable.ast\\4.2.1\\fable.ast.4.2.1.nupkg.sha512",
+    "D:\\kevha\\.nuget\\packages\\fable.browser.blob\\1.1.4\\fable.browser.blob.1.1.4.nupkg.sha512",
+    "D:\\kevha\\.nuget\\packages\\fable.browser.dom\\2.4.4\\fable.browser.dom.2.4.4.nupkg.sha512",
+    "D:\\kevha\\.nuget\\packages\\fable.browser.event\\1.4.4\\fable.browser.event.1.4.4.nupkg.sha512",
+    "D:\\kevha\\.nuget\\packages\\fable.browser.gamepad\\1.0.3\\fable.browser.gamepad.1.0.3.nupkg.sha512",
+    "D:\\kevha\\.nuget\\packages\\fable.browser.webstorage\\1.0.4\\fable.browser.webstorage.1.0.4.nupkg.sha512",
+    "D:\\kevha\\.nuget\\packages\\fable.core\\3.7.1\\fable.core.3.7.1.nupkg.sha512",
+    "D:\\kevha\\.nuget\\packages\\fable.elmish\\4.0.0\\fable.elmish.4.0.0.nupkg.sha512",
+    "D:\\kevha\\.nuget\\packages\\fable.react\\9.1.0\\fable.react.9.1.0.nupkg.sha512",
+    "D:\\kevha\\.nuget\\packages\\fable.react.types\\18.1.0\\fable.react.types.18.1.0.nupkg.sha512",
+    "D:\\kevha\\.nuget\\packages\\fable.reactdom.types\\18.0.0\\fable.reactdom.types.18.0.0.nupkg.sha512",
+    "D:\\kevha\\.nuget\\packages\\feliz\\2.3.0\\feliz.2.3.0.nupkg.sha512",
+    "D:\\kevha\\.nuget\\packages\\feliz.compilerplugins\\2.0.0\\feliz.compilerplugins.2.0.0.nupkg.sha512",
+    "D:\\kevha\\.nuget\\packages\\feliz.reactnative\\0.8.2\\feliz.reactnative.0.8.2.nupkg.sha512",
+    "D:\\kevha\\.nuget\\packages\\feliz.useelmish\\2.5.0\\feliz.useelmish.2.5.0.nupkg.sha512",
+    "D:\\kevha\\.nuget\\packages\\fsharp.core\\8.0.301\\fsharp.core.8.0.301.nupkg.sha512"
+  ],
+  "logs": []
+}

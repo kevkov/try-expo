@@ -1,0 +1,4 @@
+D:\dev\spike\try-expo\src\bin\Release\net8.0\App.fable-temp.deps.json
+D:\dev\spike\try-expo\src\obj\Release\net8.0\App.fable-temp.GeneratedMSBuildEditorConfig.editorconfig
+D:\dev\spike\try-expo\src\obj\Release\net8.0\App.fable-temp.AssemblyInfoInputs.cache
+D:\dev\spike\try-expo\src\obj\Release\net8.0\App.fable-temp.AssemblyInfo.cs
