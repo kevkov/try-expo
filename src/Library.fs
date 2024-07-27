@@ -2,6 +2,8 @@
 open Elmish
 open Feliz.ReactNative
 open Feliz.UseElmish
+open Fetch
+open Browser.Types
 
 module Say =
     let hello name =
@@ -14,6 +16,7 @@ module Say =
     }
     
     type NavProps =  {| route: {| name: string |}; navigation: Navigator|}
+
     [<ReactComponent>]     
     let View1 (props: NavProps) =
         Comp.view [ 
@@ -32,19 +35,30 @@ module Say =
         
     type Model = {
         Counter : int
+        ServiceResult: string
     }
     
     type Msg =
         | Increment
         | Decrement
+        | CallService
+        | ServiceCalled of string
         
     let private init () =
-        { Counter = 0 }, Cmd.none
+        { Counter = 0; ServiceResult = "dunno" }, Cmd.none
         
     let private update msg model =
+        
+        let callService () = promise {
+            let! response = fetch "https://sampleapis.com/futurama/api/characters" []
+            return ()
+        }
+        
         match msg with
         | Increment -> { model with Counter = model.Counter + 1 }, Cmd.none
         | Decrement -> { model with Counter = model.Counter - 1 }, Cmd.none
+        | CallService -> model, Cmd.OfPromise.either callService () (fun _ -> ServiceCalled "success") (fun _ -> ServiceCalled"failed :)")
+        | ServiceCalled s -> { model with ServiceResult = s }, Cmd.none
         
     let View2 () =
         let model, dispatch = React.useElmish(init, update)
@@ -53,6 +67,10 @@ module Say =
             Comp.text [
                 // prop.style middleCentre
                 prop.text $"{model.Counter}"
+            ]
+            Comp.text [
+                // prop.style middleCentre
+                prop.text $"{model.ServiceResult} {model.Counter}"
             ]
             Comp.pressable [
                 prop.onPress (fun _ -> dispatch Increment)
@@ -64,6 +82,12 @@ module Say =
                 prop.onPress (fun _ -> dispatch Decrement)
                 prop.children [
                     Comp.text [ prop.text "Down" ]
+                ]
+            ]
+            Comp.pressable [
+                prop.onPress (fun _ -> dispatch CallService)
+                prop.children [
+                    Comp.text [ prop.text "Call" ]
                 ]
             ]
             Comp.statusBar []
