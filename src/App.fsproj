@@ -13,6 +13,7 @@
     <Content Include="..\package.json">
       <Link>package.json</Link>
     </Content>
+    <TypeScriptCompile Include="About.tsx" />
   </ItemGroup>
 
   <ItemGroup>

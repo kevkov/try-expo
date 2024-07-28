@@ -3,7 +3,8 @@ open Elmish
 open Feliz.ReactNative
 open Feliz.UseElmish
 open Fetch
-open Browser.Types
+open Feliz
+
 
 module Say =
     let hello name =
@@ -28,6 +29,13 @@ module Say =
                     prop.children [
                         Comp.text [ prop.text $"From {props.route.name} to View2" ]
                     ]
+                ]
+                Comp.pressable [
+                    prop.onPress (fun _ -> props.navigation.navigate "View3")
+                    prop.children [
+                        Comp.text [ prop.text $"From {props.route.name} to View3" ]
+                    ]
+                    
                 ]
                 Comp.statusBar []
             ]
@@ -92,3 +100,8 @@ module Say =
             ]
             Comp.statusBar []
         ]
+        
+    [<ReactComponent(import="About", from="./About.tsx")>]
+    let About (title: string) = React.imported()
+    let View3 () =
+        About "me"
