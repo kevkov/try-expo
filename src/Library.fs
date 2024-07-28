@@ -4,6 +4,7 @@ open Feliz.ReactNative
 open Feliz.UseElmish
 open Fetch
 open Feliz
+open Fable.Core
 
 
 module Say =
@@ -36,6 +37,12 @@ module Say =
                         Comp.text [ prop.text $"From {props.route.name} to View3" ]
                     ]
                     
+                ]
+                Comp.pressable [
+                    prop.onPress (fun _ -> props.navigation.navigate "View4")
+                    prop.children [
+                        Comp.text [ prop.text $"View4" ]
+                    ]
                 ]
                 Comp.statusBar []
             ]
@@ -105,3 +112,15 @@ module Say =
     let About (title: string) = React.imported()
     let View3 () =
         About "me"
+        
+    [<JSX.Component>]    
+    let View4 () =
+        JSX.jsx
+            $"""
+            // because something generates import {{ Text as Text$ }} from ... elsewhere
+            import {{View, Text as T}} from "react-native";
+
+            <View>
+                <T>JSX view</T>
+            </View>
+        """
