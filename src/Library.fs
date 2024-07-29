@@ -116,8 +116,9 @@ module Say =
     [<JSX.Component>]    
     let View4 () =
         JSX.jsx
-            $"""
             // because something generates import {{ Text as Text$ }} from ... elsewhere
+            // also you have to be very precise about the import, e.g. no comments above or inline
+            $"""
             import {{View, Text as T}} from "react-native";
 
             <View>
